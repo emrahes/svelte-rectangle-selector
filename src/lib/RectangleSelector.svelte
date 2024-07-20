@@ -12,24 +12,24 @@
 	let currentY = 0;
 	let container: HTMLElement | undefined;
 
-	const startDrawing = (event: MouseEvent): void => {
+	const startDrawing = ({clientX, clientY}: MouseEvent): void => {
 		if (!container) return;
 		drawing = true;
 		const rect = container.getBoundingClientRect();
-		startX = event.clientX - rect.left;
-		startY = event.clientY - rect.top;
+		startX = clientX - rect.left;
+		startY = clientY - rect.top;
 		currentX = startX;
 		currentY = startY;
 	};
 
-	const drawRectangle = (event: MouseEvent): void => {
+	const drawRectangle = ({clientX, clientY}: MouseEvent): void => {
 		if (!drawing || !container) return;
 		const rect = container.getBoundingClientRect();
-		currentX = event.clientX - rect.left;
-		currentY = event.clientY - rect.top;
+		currentX = clientX - rect.left;
+		currentY = clientY - rect.top;
 	};
 
-	const endDrawing = (event: MouseEvent): void => {
+	const endDrawing = (): void => {
 		if (!drawing) return;
 		drawing = false;
 		const rectangle: Rectangle = {
