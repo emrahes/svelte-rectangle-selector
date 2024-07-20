@@ -36,30 +36,29 @@ To use the RectangleSelector component in your Svelte project, follow these step
    </script>
    ```
 
-### Use the Component in Your Template
+    Include the `RectangleSelector` in your Svelte template:
 
-Include the `RectangleSelector` in your Svelte template:
+    ```typescript
+    <RectangleSelector
+    onUpdateRectangle={updateRectangle}
+    rectangleStyle={rectangleStyle}
+    >
+    <div class="rectangle-display"></div>
+    </RectangleSelector>
 
-```typescript
-<RectangleSelector
-  onUpdateRectangle={updateRectangle}
-  rectangleStyle={rectangleStyle}
->
-  <div class="rectangle-display"></div>
-</RectangleSelector>
+    <section>
+    <h3>Rectangle Data:</h3>
+    {#if rectangle}
+        <ul>
+        <li>Position X: {rectangle.x}px</li>
+        <li>Position Y: {rectangle.y}px</li>
+        <li>Width: {rectangle.width}px</li>
+        <li>Height: {rectangle.height}px</li>
+        </ul>
+    {/if}
+    </section>
+    ```
 
-<section>
-  <h3>Rectangle Data:</h3>
-  {#if rectangle}
-    <ul>
-      <li>Position X: {rectangle.x}px</li>
-      <li>Position Y: {rectangle.y}px</li>
-      <li>Width: {rectangle.width}px</li>
-      <li>Height: {rectangle.height}px</li>
-    </ul>
-  {/if}
-</section>
-```
 ### Props
 
 - `onUpdateRectangle: (rectangle: Rectangle) => void`  
