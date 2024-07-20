@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
-	import type { Rectangle, RectangleStyle } from './types/Rectangles.js';
+	import type { Rectangle, RectangleStyle } from './types';
 
 	export let onUpdateRectangle: (rectangle: Rectangle) => void;
 	export let rectangleStyle: RectangleStyle;
@@ -12,7 +12,7 @@
 	let currentY = 0;
 	let container: HTMLElement | undefined;
 
-	const startDrawing = ({clientX, clientY}: MouseEvent): void => {
+	const startDrawing = ({ clientX, clientY }: MouseEvent): void => {
 		if (!container) return;
 		drawing = true;
 		const rect = container.getBoundingClientRect();
@@ -22,7 +22,7 @@
 		currentY = startY;
 	};
 
-	const drawRectangle = ({clientX, clientY}: MouseEvent): void => {
+	const drawRectangle = ({ clientX, clientY }: MouseEvent): void => {
 		if (!drawing || !container) return;
 		const rect = container.getBoundingClientRect();
 		currentX = clientX - rect.left;

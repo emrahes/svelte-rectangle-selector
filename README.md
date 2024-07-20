@@ -1,15 +1,17 @@
 # Svelte Rectangle Picker
+
 [![npm version](https://img.shields.io/npm/v/%40emrahes%2Fsvelte-rectangle-selector)](https://www.npmjs.com/package/@emrahes/svelte-rectangle-selector)
 
 A Svelte component for drawing rectangles on a container. This component allows users to click and drag to create rectangles, with configurable styles for the rectangles.
 
 ## Features
+
 - **Draw Rectangles**: Click and drag to draw rectangles on the container.
 - **Customizable Styles**: Configure the border and background color of the rectangles.
 - **Event Handling**: Receive updates on rectangle creation through a callback.
 
-
 ## Installation
+
 To use the RectangleSelector component in your Svelte project, follow these steps:
 `npm i @emrahes/svelte-rectangle-selector`
 
@@ -37,28 +39,28 @@ To use the RectangleSelector component in your Svelte project, follow these step
    </script>
    ```
 
-    Include the `RectangleSelector` in your Svelte template:
+   Include the `RectangleSelector` in your Svelte template:
 
-    ```typescript
-    <RectangleSelector
-    onUpdateRectangle={updateRectangle}
-    rectangleStyle={rectangleStyle}
-    >
-    <div class="rectangle-display"></div>
-    </RectangleSelector>
+   ```typescript
+   <RectangleSelector
+   onUpdateRectangle={updateRectangle}
+   rectangleStyle={rectangleStyle}
+   >
+   <div class="rectangle-display"></div>
+   </RectangleSelector>
 
-    <section>
-    <h3>Rectangle Data:</h3>
-    {#if rectangle}
-        <ul>
-        <li>Position X: {rectangle.x}px</li>
-        <li>Position Y: {rectangle.y}px</li>
-        <li>Width: {rectangle.width}px</li>
-        <li>Height: {rectangle.height}px</li>
-        </ul>
-    {/if}
-    </section>
-    ```
+   <section>
+   <h3>Rectangle Data:</h3>
+   {#if rectangle}
+       <ul>
+       <li>Position X: {rectangle.x}px</li>
+       <li>Position Y: {rectangle.y}px</li>
+       <li>Width: {rectangle.width}px</li>
+       <li>Height: {rectangle.height}px</li>
+       </ul>
+   {/if}
+   </section>
+   ```
 
 ### Props
 
