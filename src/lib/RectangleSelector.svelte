@@ -3,16 +3,17 @@
     import type { Rectangle, RectangleStyle } from '../types/Rectangles.js';
   
     export let onUpdateRectangle: (rectangle: Rectangle) => void;
-    export let rectangleStyle;
-    
+    export let rectangleStyle: RectangleStyle;
+  
     let drawing = false;
     let startX = 0;
     let startY = 0;
     let currentX = 0;
     let currentY = 0;
-    let container: HTMLElement;
+    let container: HTMLElement | undefined;
   
     const startDrawing = (event: MouseEvent): void => {
+      if (!container) return;
       drawing = true;
       const rect = container.getBoundingClientRect();
       startX = event.clientX - rect.left;
@@ -22,7 +23,7 @@
     };
   
     const drawRectangle = (event: MouseEvent): void => {
-      if (!drawing) return;
+      if (!drawing || !container) return;
       const rect = container.getBoundingClientRect();
       currentX = event.clientX - rect.left;
       currentY = event.clientY - rect.top;
@@ -37,7 +38,6 @@
         width: Math.abs(currentX - startX),
         height: Math.abs(currentY - startY),
       };
-      console.log('New Rectangle:', rectangle);
       onUpdateRectangle(rectangle);
     };
   
@@ -63,15 +63,15 @@
     {#if drawing}
       <div
         class="rectangle"
-        style="left: {Math.min(startX, currentX)}px; top: {Math.min(startY, currentY)}px; width: {Math.abs(currentX - startX)}px; height: {Math.abs(currentY - startY)}px; border: {rectangleStyle.border}; background-color: {rectangleStyle.backgroundColor};">
-      </div>
+        style="left: {Math.min(startX, currentX)}px; top: {Math.min(startY, currentY)}px; width: {Math.abs(currentX - startX)}px; height: {Math.abs(currentY - startY)}px; border: {rectangleStyle.border}; background-color: {rectangleStyle.backgroundColor};"
+      ></div>
     {/if}
   </div>
   
   <style>
     .rectangle {
       position: absolute;
-      pointer-events: none
+      pointer-events: none;
     }
   </style>
   
