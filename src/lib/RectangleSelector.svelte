@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
-	import type { Rectangle, RectangleStyle } from '../types/Rectangles.js';
+	import type { Rectangle, RectangleStyle } from './types/Rectangles.js';
 
 	export let onUpdateRectangle: (rectangle: Rectangle) => void;
 	export let rectangleStyle: RectangleStyle;
