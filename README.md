@@ -25,17 +25,17 @@ To use the RectangleSelector component in your Svelte project, follow these step
 
    ```typescript
    <script lang="ts">
-     import { RectangleSelector } from "@emrahes/svelte-rectangle-selector";
+    import { RectangleSelector, type Rectangle, type RectangleStyle } from "@emrahes/svelte-rectangle-selector";
 
-     let rectangle: Rectangle | undefined;
+    let rectangle: Rectangle | undefined;
      const rectangleStyle: RectangleStyle = {
        border: '2px solid red',
        backgroundColor: 'rgba(255, 0, 0, 0.5)',
      };
 
-     function updateRectangle(newRectangle: Rectangle) {
+    function updateRectangle(newRectangle: Rectangle) {
        rectangle = newRectangle;
-     }
+    }
    </script>
    ```
 
@@ -43,10 +43,10 @@ To use the RectangleSelector component in your Svelte project, follow these step
 
    ```typescript
    <RectangleSelector
-   onUpdateRectangle={updateRectangle}
-   rectangleStyle={rectangleStyle}
+    onUpdateRectangle={updateRectangle}
+    rectangleStyle={rectangleStyle}
    >
-   <div class="rectangle-display"></div>
+      <div class="rectangle-display" />
    </RectangleSelector>
 
    <section>
