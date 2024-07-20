@@ -1,9 +1,10 @@
 <script lang="ts">
     import { onMount, onDestroy } from 'svelte';
-    import type { Rectangle } from '../types/Rectangles.js';
+    import type { Rectangle, RectangleStyle } from '../types/Rectangles.js';
   
     export let onUpdateRectangle: (rectangle: Rectangle) => void;
-  
+    export let rectangleStyle;
+    
     let drawing = false;
     let startX = 0;
     let startY = 0;
@@ -62,7 +63,7 @@
     {#if drawing}
       <div
         class="rectangle"
-        style="left: {Math.min(startX, currentX)}px; top: {Math.min(startY, currentY)}px; width: {Math.abs(currentX - startX)}px; height: {Math.abs(currentY - startY)}px;">
+        style="left: {Math.min(startX, currentX)}px; top: {Math.min(startY, currentY)}px; width: {Math.abs(currentX - startX)}px; height: {Math.abs(currentY - startY)}px; border: {rectangleStyle.border}; background-color: {rectangleStyle.backgroundColor};">
       </div>
     {/if}
   </div>
@@ -70,8 +71,6 @@
   <style>
     .rectangle {
       position: absolute;
-      border: 2px solid blue;
-      background-color: rgba(0, 0, 255, 0.2);
       pointer-events: none
     }
   </style>
