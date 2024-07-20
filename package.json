@@ -1,5 +1,5 @@
 {
-	"name": "svelte-rectangle-selector",
+	"name": "@emrahes/svelte-rectangle-selector",
 	"version": "0.1.1",
 	"author": "emrahes",
 	"scripts": {
