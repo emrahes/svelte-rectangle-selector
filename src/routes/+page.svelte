@@ -1,6 +1,6 @@
 <script lang="ts">
 	import RectangleSelector from '$lib/RectangleSelector.svelte';
-	import type { Rectangle, RectangleStyle } from '../types/Rectangles.js';
+	import type { Rectangle, RectangleStyle } from '../lib/types/Rectangles.js';
 
 	let rectangle: Rectangle | undefined;
 	const rectangleStyle: RectangleStyle = {
