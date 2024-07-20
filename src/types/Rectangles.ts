@@ -1,11 +1,11 @@
 export type Rectangle = {
-    x: number;
-    y: number;
-    width: number;
-    height: number;
-  };
+	x: number;
+	y: number;
+	width: number;
+	height: number;
+};
 
-  export type RectangleStyle = {
-    border: string;
-    backgroundColor: string;
-  }
+export type RectangleStyle = {
+	border: string;
+	backgroundColor: string;
+};
