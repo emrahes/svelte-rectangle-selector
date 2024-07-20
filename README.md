@@ -69,10 +69,6 @@ To use the RectangleSelector component in your Svelte project, follow these step
   - `border`: CSS border property for the rectangle.
   - `backgroundColor`: CSS background color for the rectangle.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgements
 
 - [Svelte](https://svelte.dev/) - The framework used to build this component.
