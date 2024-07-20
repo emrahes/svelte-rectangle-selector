@@ -23,8 +23,7 @@ To use the RectangleSelector component in your Svelte project, follow these step
 
    ```typescript
    <script lang="ts">
-     import RectangleSelector from '$lib/RectangleSelector.svelte';
-     import type { Rectangle, RectangleStyle } from '../types/Rectangles.js';
+     import { RectangleSelector } from "@emrahes/svelte-rectangle-selector";
 
      let rectangle: Rectangle | undefined;
      const rectangleStyle: RectangleStyle = {
