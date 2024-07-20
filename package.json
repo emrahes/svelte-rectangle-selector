@@ -1,6 +1,6 @@
 {
 	"name": "@emrahes/svelte-rectangle-selector",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"author": "emrahes",
 	"scripts": {
 		"dev": "vite dev",
@@ -16,7 +16,7 @@
 	},
 	"exports": {
 		".": {
-			"types": "./dist/types/Rectangles.d.ts",
+			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
 		}
 	},
