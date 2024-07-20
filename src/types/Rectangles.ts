@@ -4,3 +4,8 @@ export type Rectangle = {
     width: number;
     height: number;
   };
+
+  export type RectangleStyle = {
+    border: string;
+    backgroundColor: string;
+  }
