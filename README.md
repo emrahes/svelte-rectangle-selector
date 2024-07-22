@@ -2,6 +2,8 @@
 
 [![npm version](https://img.shields.io/npm/v/%40emrahes%2Fsvelte-rectangle-selector)](https://www.npmjs.com/package/@emrahes/svelte-rectangle-selector)
 
+Check out the live demo here: [Svelte Rectangle Selector Demo](https://emrahes.github.io/svelte-rectangle-selector/)
+
 A Svelte component for drawing rectangles on a container. This component allows users to click and drag to create rectangles, with configurable styles for the rectangles.
 
 ## Features
