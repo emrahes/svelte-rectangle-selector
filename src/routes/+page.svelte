@@ -1,6 +1,6 @@
 <script lang="ts">
+	import type { Rectangle, RectangleStyle } from '$lib';
 	import RectangleSelector from '$lib/RectangleSelector.svelte';
-	import type { Rectangle, RectangleStyle } from '../lib/types/Rectangles.js';
 
 	let rectangle: Rectangle | undefined;
 	const rectangleStyle: RectangleStyle = {
@@ -23,8 +23,8 @@
 	<h3>Rectangle Data:</h3>
 	{#if rectangle}
 		<ul>
-			<li>Position X: {rectangle.x}px</li>
-			<li>Position Y: {rectangle.y}px</li>
+			<li>Position X: {rectangle.x}</li>
+			<li>Position Y: {rectangle.y}</li>
 			<li>Width: {rectangle.width}px</li>
 			<li>Height: {rectangle.height}px</li>
 		</ul>
@@ -32,10 +32,10 @@
 </section>
 
 <style>
-	.rectangle-display {
-		height: 500px;
-		width: 500px;
-		background: green;
-		position: relative;
-	}
+.rectangle-display {
+    height: 500px;
+    width: '100%';
+    background: green;
+    position: relative;
+}
 </style>
