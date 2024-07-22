@@ -29,6 +29,7 @@
 		"svelte": "^4.0.0"
 	},
 	"devDependencies": {
+		"@semantic-release/npm": "^12.0.1",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/package": "^2.0.0",
@@ -41,6 +42,7 @@
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
 		"publint": "^0.1.9",
+		"semantic-release": "^24.0.0",
 		"svelte": "^4.2.7",
 		"svelte-check": "^3.6.0",
 		"tslib": "^2.4.1",
